@@ -19,9 +19,9 @@ const Navigation = () => {
         <Route path="/reserve" element={<Reserve />} />
         <Route path="/discover" element={<Discover />} />
         <Route path="/description/:id" element={<Item_Description />} />
-      
       </Routes>
       
+    
       {!isLogin && <BottomNavigator />}
     </>
   );
