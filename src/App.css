@@ -1,0 +1,27 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none !important; 
+  border: none;
+}
+
+input, select, textarea, button {
+  outline: none !important; 
+}
+
+body {
+  background-color: rgb(238, 238, 238);
+  width: 100%;
+}
+
+
+.form input, .form select, .form textarea, .form button {
+  outline: none !important;
+}
+
+label{
+  margin-bottom: 10px;
+}
