@@ -24,7 +24,6 @@ const Card = () => {
     const styles = {
         cardContainer: {
             display: 'flex',
-            gap: '1rem',
             justifyContent: 'center',
             alignItems: 'center',
             padding: '10px',
@@ -37,9 +36,10 @@ const Card = () => {
             justifyContent: 'center',
             alignItems: 'center',
             gap: '1rem',
-            width: '130px',
+            minWidth: '130px',
             minHeight: '150px',
             padding: '10px',
+            margin: '0 0.5rem', 
             backgroundColor: '#d1d1d1',
             borderRadius: '10px',
             cursor: 'pointer',
@@ -54,7 +54,7 @@ const Card = () => {
             textAlign: 'center',
         },
     };
-
+    
     const data = [
         {
             id: 0,
@@ -105,15 +105,13 @@ const Card = () => {
     const navigate = useNavigate();
 
     return (
-        <motion.div className="card-container" ref={carousel}>
-            <AnimatePresence initial={false}>
+        <motion.div className="card-container">
+            <AnimatePresence >
                 {data.map((item, index) => (
                     <motion.div
                         key={index}
                         style={styles.container}
                         onClick={() => navigate(`/description/${item.id}`, { state: { item: item.data } })}
-                        transition={{ duration: 0.2 }}
-                        whileTap={{ cursor: "grabbing" }}
                     >
                         <div style={styles.icon}>{item.icon}</div>
                         <p style={styles.text}>{item.name}</p>

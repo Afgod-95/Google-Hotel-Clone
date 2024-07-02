@@ -35,7 +35,7 @@ const Register = () => {
       localStorage.setItem('user', JSON.stringify(user));
       setTimeout(() => {
         setIsLoading(false);
-        navigate('/');
+        navigate('/home');
       }, 2000);
     } catch (error) {
       setIsLoading(false); 

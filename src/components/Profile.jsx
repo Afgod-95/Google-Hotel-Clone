@@ -45,13 +45,16 @@ const Profile = () => {
         icon: {
             width: '30px',
             height: '30px',
+            paddingRight: '10px'
         },
         animatedText: {
-            width: '91%',
+            width: '95%',
+            margin: 'auto',
             whiteSpace: 'nowrap',
             overflow: 'hidden',
             position: 'relative',
             fontSize: '14px',
+            paddingRight: '10px',
             color: '#000',
         },
         text: {
@@ -66,7 +69,7 @@ const Profile = () => {
     };
 
     const navigate = useNavigate()
-    
+
     return (
         <div style={styles.mainContainer}>
             <div style={styles.container}>
@@ -78,8 +81,8 @@ const Profile = () => {
                     <h4>Hotel</h4>
                 </div>
                 <div style={{...styles.innerContainer, gap: '1rem'}}>
-                    <img src={Calendar_Icon} alt="Calendar Icon" style={styles.img} onClick={() => navigate('/profile')}/>
-                    <img src={User_Icon} alt="Calendar Icon" style={styles.img} onClick={() => navigate('/calendar')} />
+                    <img src={Calendar_Icon} alt="Calendar Icon" style={styles.img} onClick={() => navigate('/user-profile')}/>
+                    <img src={User_Icon} alt="Calendar Icon" style={styles.img} onClick={() => navigate('/event-calendar')} />
                 </div>
             </div>
             <div style={styles.thinLine}></div>

@@ -1,11 +1,14 @@
-import React from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
-import BottomNavigator from '../components/BottomNavigator';
-import Home from '../pages/Home';
-import Reserve from '../pages/Reserve';
-import Discover from '../pages/Discover';
-import Login from '../pages/auth/Login';
-import Item_Description from '../pages/Item_Description';
+
+import React from 'react'
+import { useLocation, Route,   Routes } from 'react-router-dom';
+import Login from '../pages/auth/Login.jsx';
+import Home from '../pages/Home.jsx';
+import Reserve from '../pages/Reserve.jsx'
+import Discover from '../pages/Discover.jsx'
+import Item_Description from '../pages/Item_Description.jsx';
+import UserProfile from '../pages/UserProfile.jsx';
+import Event_Calendar from '../pages/Event_Calendar.jsx';
+import BottomNavigator from '../components/BottomNavigator.jsx';
 
 const Navigation = () => {
   const location = useLocation();
@@ -14,17 +17,19 @@ const Navigation = () => {
   return (
     <>
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/reserve" element={<Reserve />} />
         <Route path="/discover" element={<Discover />} />
         <Route path="/description/:id" element={<Item_Description />} />
-      </Routes>
+        <Route path="/user-profile" element={<UserProfile />} />
+        <Route path="/event-calendar" element={<Event_Calendar/>} />
       
-    
-      {!isLogin && <BottomNavigator />}
+      
+      </Routes>
+      {!isLogin && <BottomNavigator />}  
     </>
   );
 };
 
-export default Navigation;
+export default Navigation

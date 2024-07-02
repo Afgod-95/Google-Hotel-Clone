@@ -21,7 +21,7 @@ const Language_Settings = () => {
   };
 
   return (
-    <Box display="flex" justifyContent="space-between" alignItems="center">
+    <Box display="flex" justifyContent="right" alignItems="center">
       <Typography variant="body1" onClick={handleLanguageClick}>
         {language}
       </Typography>

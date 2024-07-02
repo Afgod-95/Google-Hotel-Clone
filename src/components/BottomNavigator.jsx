@@ -65,7 +65,7 @@ const BottomNavigator = () => {
               color: value === 0 ? 'red' : 'gray',
             },
           }}
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/home')}
         />
         <BottomNavigationAction
           label="RESERVE"
