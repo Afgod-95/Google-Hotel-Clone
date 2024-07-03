@@ -12,7 +12,7 @@ import BottomNavigator from '../components/BottomNavigator.jsx';
 
 const Navigation = () => {
   const location = useLocation();
-  const isLogin = location.pathname === '/login';
+  const isLogin = location.pathname === '/';
 
   return (
     <>
