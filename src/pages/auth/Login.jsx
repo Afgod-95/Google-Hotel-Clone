@@ -73,7 +73,7 @@ const Login = () => {
         console.log('User data saved to localStorage')
         setTimeout(() => {
           setIsLoading(false);
-          navigate('/');
+          navigate('/home');
         }, 2000); 
       }
     } catch (error) {
