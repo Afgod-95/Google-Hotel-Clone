@@ -66,16 +66,14 @@ const Login = () => {
     try {
       setIsLoading(true);
       const userDetails = localStorage.getItem('user');
-      if(!userDetails){
-        alert('Please fill all the fields');
-      }
-      else{
+      
+     
         console.log('User data saved to localStorage')
         setTimeout(() => {
           setIsLoading(false);
           navigate('/home');
         }, 2000); 
-      }
+      
     } catch (error) {
       console.log(error.message);
       setIsLoading(false);
